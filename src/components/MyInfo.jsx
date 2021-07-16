@@ -1,19 +1,21 @@
 // import React from "react";
 
 function MyInfo() {
+  const date = new Date();
+  const hours = date.getHours();
+  let timeOfDay;
+
+  if (hours < 12) {
+    timeOfDay = "morning";
+  } else if (hours >= 12 && hours < 17) {
+    timeOfDay = "afternoon";
+  } else {
+    timeOfDay = "night";
+  }
+
   return (
     <div>
-      <h1 style={{ color: "red", fontSize: "50px" }}>Mike Robards!</h1>
-      <p style={{ fontStyle: "italic" }}>
-        Hello! I am a budding Front End Web Developer! I am self-taught, and
-        currently learning Scrimba! I also have an identical twin who is a
-        Senior Dev!
-      </p>
-      <ul style={{ color: "blue", fontSize: "25px" }}>
-        <li>Paris</li>
-        <li>Hawaii</li>
-        <li>Costa Rica</li>
-      </ul>
+      <h1>Good {timeOfDay}!</h1>
     </div>
   );
 }
