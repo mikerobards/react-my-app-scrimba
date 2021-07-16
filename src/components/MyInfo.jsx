@@ -13,9 +13,15 @@ function MyInfo() {
     timeOfDay = "night";
   }
 
+  const styles = {
+    color: "#FF8C00",
+    backgroundColor: "#FF2D00",
+    fontSize: "50px",
+  };
+
   return (
     <div>
-      <h1>Good {timeOfDay}!</h1>
+      <h1 style={styles}>Good {timeOfDay}!</h1>
     </div>
   );
 }
