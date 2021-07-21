@@ -16,4 +16,21 @@ function App() {
     )
 }
 
+// class App extends React.Component {
+
+//     jourMethod() {
+
+//     }
+
+//     render() {
+//         const style = this.yourMethod()
+//         const date = new Date()
+//         return (
+//             <div>
+//                 <h1>{this.props.whatever}</h1>
+//             </div>
+//         )
+//     }
+// }
+
 export default App
