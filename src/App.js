@@ -13,7 +13,7 @@ import todosData from './data/todosData';
 
 function App() {
   const todoComponents = todosData.map(item =>
-    <TodoItem todoItem={item} key={item.id} />)
+    <TodoItem item={item} key={item.id} />)
   return (
     <div className="todo-list">
       {todoComponents}

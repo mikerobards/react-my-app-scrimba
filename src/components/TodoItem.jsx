@@ -4,7 +4,7 @@ function TodoItem(props) {
   return (
     <div className="todo-item">
       <input type="checkbox" />
-      <p>{props.todoItem.text}</p>
+      <p>{props.item.text}</p>
     </div>
   );
 }
