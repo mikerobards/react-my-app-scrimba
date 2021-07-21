@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './App.css';
 
 // import Navbar from './components/Navbar';
@@ -10,9 +10,15 @@ import './App.css';
 import TodoItem from './components/TodoItem';
 import todosData from './data/todosData';
 
-class App extends React.Component {
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      todosData
+    }
+  }
   render() {
-    const todoComponents = todosData.map(item =>
+    const todoComponents = this.state.todosData.map(item =>
       <TodoItem item={item} key={item.id} />)
     return (
       <div className="todo-list">
