@@ -1,13 +1,13 @@
 import React from 'react'
 import './App.css';
 
-
 // import Navbar from './components/Navbar';
 // import MainContent from './components/MainContent';
 // import Footer from './components/Footer';
 // import MyInfo from './components/MyInfo';
-import TodoItem from './components/TodoItem';
 // import ContactCard from './components/ContactCard';
+
+import TodoItem from './components/TodoItem';
 import todosData from './data/todosData';
 
 
