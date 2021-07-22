@@ -24,29 +24,39 @@ class App extends Component {
     handleChange() {
         console.log(this.state.isLoggedIn)
         this.setState(prevState => {
-            const updatedState = prevState.isLoggedIn
+            // const updatedState = prevState.isLoggedIn
             return {
-                isLoggedIn: !updatedState
+                // isLoggedIn: !updatedState
+                isLoggedIn: !prevState.isLoggedIn
             }
         })
     }
 
     render() {
+        let buttonText = this.state.isLoggedIn ? "LOG OUT" : "LOG IN"
+        let displayText = this.state.isLoggedIn ? "Logged In" : "Logged Out"
         return (
+            // <div>
+            //     {
+            //         this.state.isLoggedIn ?
+            //             <h1>Logged In</h1> :
+            //             <h1>Logged Out</h1>
+            //     }
+            //     <button onClick={this.handleChange}>
+            //         {
+            //             this.state.isLoggedIn ?
+            //                 <span>Log Out</span> :
+            //                 <span>Log In</span>
+            //         }
+            //     </button>
+            // </div>
+
+
             <div>
-                {
-                    this.state.isLoggedIn ?
-                        <h1>Logged In</h1> :
-                        <h1>Logged Out</h1>
-                }
-                <button onClick={this.handleChange}>
-                    {
-                        this.state.isLoggedIn ?
-                            <span>Log Out</span> :
-                            <span>Log In</span>
-                    }
-                </button>
+                <h1>{displayText}</h1>
+                <button onClick={this.handleChange}>{buttonText}</button>
             </div>
+
         )
     }
 }
