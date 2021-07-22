@@ -9,16 +9,26 @@ class App extends Component {
         this.state = {}
     }
 
+    // getDerivedStateFromProps(state) {
+    // return the new, updated state based upon the props
+    // https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
+    // }
+
+    getSnapshotBeforeUpdate() {
+        // create a backup of current way things are
+        // https://reactjs.org/docs/react-component.html#getsnapshotbeforeupdate
+    }
+
     componentDidMount() {
         //get the data I need to correct display
     }
 
-    componentWillReceiveProps(nextProps) { //depreciated with React 17
-        // used to check if nextProps are dif from current props
-        if (nextProps.whatever !== this.props.whatever) {
-            // do something
-        }
-    }
+    // componentWillReceiveProps(nextProps) { //depreciated with React 17
+    // used to check if nextProps are dif from current props
+    //     if (nextProps.whatever !== this.props.whatever) {
+    // do something
+    //     }
+    // }
 
     shouldComponentUpdate(nextProps, nextState) {
         // return true if want it to update
