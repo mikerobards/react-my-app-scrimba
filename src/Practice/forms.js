@@ -89,7 +89,7 @@ class App extends Component {
                     <option value="yellow">Yellow</option>
                 </select>
 
-                <h2>{this.state.favColor</h2>
+                <h2>{this.state.favColor}</h2>
                 <button>Submit</button>
             </form>
         )
