@@ -24,7 +24,9 @@ class App extends Component {
             age: "",
             gender: "",
             destination: "",
-            dietary: false
+            isVegan: false,
+            isKosher: false,
+            isLactoseFree: false
         }
 
         this.handleChange = this.handleChange.bind(this)
@@ -88,6 +90,7 @@ class App extends Component {
                         onChange={this.handleChange}
                         name="destination"
                     >
+                        <option value="">-- Please Choose a destination --</option>
                         <option value="Paris, France">Paris, France</option>
                         <option value="New York City, USA">New York City, USA</option>
                         <option value="Madrid, Spain">Madrid, Spain</option>
@@ -98,10 +101,28 @@ class App extends Component {
                     <label>
                         <input
                             type="checkbox"
-                            name="dietary"
-                            checked={this.state.dietary}
+                            name="isVegan"
+                            checked={this.state.isVegan}
                             onChange={this.handleChange}
-                        /> Dietary Restrictions?
+                        /> Vegan?
+                    </label>
+                    <br />
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="isKosher"
+                            checked={this.state.isKosher}
+                            onChange={this.handleChange}
+                        /> Kosher?
+                    </label>
+                    <br />
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="isLactoseFree"
+                            checked={this.state.isLactoseFree}
+                            onChange={this.handleChange}
+                        /> Lactose Free?
                     </label>
                     <br />
                     <button>Submit</button>
@@ -112,7 +133,11 @@ class App extends Component {
                 <p>Your age: {this.state.age}</p>
                 <p>Your gender: {this.state.gender}</p>
                 <p>Your destination: {this.state.destination}</p>
-                <p>Your dietary restrictions: {this.state.dietary}</p>
+                <p>Your dietary restrictions:
+                    <p>Vegan: {this.state.isVegan ? "Yes" : "No"}</p>
+                    <p>Kosher: {this.state.isKosher ? "Yes" : "No"}</p>
+                    <p>Lactose Free: {this.state.isLactoseFree ? "Yes" : "No"}</p>
+                </p>
             </main>
         )
     }
