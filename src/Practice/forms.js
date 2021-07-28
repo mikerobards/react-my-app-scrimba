@@ -2,6 +2,7 @@ import React, { Component } from "react"
 
 // Formik Library!!!
 class App extends Component {
+    state = {} // this removes constructor and super
     constructor() {
         super()
         this.state = {
@@ -11,12 +12,17 @@ class App extends Component {
             gender: "",
             favColor: "red"
         }
-        this.handleChange = this.handleChange.bind(this)
+        // this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
 
     }
 
-    handleChange(event) {
+    // handleChange(event) {
+    //     const { name, value, type, checked } = event.target
+    //     type === "checkbox" ? this.setState({ [name]: checked }) : this.setState({ [name]: value })
+    // }
+
+    handleChange = (event) => { //arrow function removes bind statement
         const { name, value, type, checked } = event.target
         type === "checkbox" ? this.setState({ [name]: checked }) : this.setState({ [name]: value })
     }
